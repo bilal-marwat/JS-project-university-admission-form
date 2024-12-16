@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Eligible</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #f8d7da;
+      }
+      .message {
+        text-align: center;
+        font-size: 24px;
+        color: #721c24;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message"></div>
+    <h1 id="message"></h1>
+  </body>
+  <script>
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get("name"); // Get 'name' parameter
+    const status = urlParams.get("status"); // Get 'status' parameter
+
+    // Display message
+    const message = `Sorry, ${name}. 😞 You are not eligible for admission.`;
+    document.getElementById("message").textContent = message;
+  </script>
+</html>
