@@ -162,7 +162,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
       
     // open new widnow and show the result with student name
     let status = "";
-      if (age < 18 || score < 2.5) {
+      if (age < 18 || score < 900) {
         status = "not-eligible";
       } else {
         status = "eligible";
