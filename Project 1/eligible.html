@@ -30,10 +30,11 @@
     // Get URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get("name"); // Get 'name' parameter
+    const course = urlParams.get("course"); // Get 'corse' parameter
     const status = urlParams.get("status"); // Get 'status' parameter
 
     // Display message
-    const message = `Congratulations, ${name}! 🎉 You are eligible for admission.`;
+    const message = `Congratulations, ${name}! 🎉 You are eligible for Admission in ${course}`;
     document.getElementById("message").textContent = message;
   </script>
 </html>

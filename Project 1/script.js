@@ -122,7 +122,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const score = parseFloat(document.getElementById('score').value);
 
     // Validate inputs
-    if (!name || !email || !dob || !score || isNaN(score)) {
+    if (!name || !email || !dob || !course || isNaN(score)) {
         alert("Please fill in all fields correctly.");
         return;
     }
@@ -169,7 +169,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
       }
 
       // Redirect to new page with URL parameters
-      const url = `${status}.html?name=${encodeURIComponent(name)}&status=${status}`;
+      const url = `${status}.html?name=${encodeURIComponent(name)}&course=${course}&status=${status}`;
       window.open(url, "_blank"); // Open in new tab
 
 
